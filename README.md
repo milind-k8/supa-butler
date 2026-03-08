@@ -1,16 +1,25 @@
 # supa-butler
 
-This project now uses a custom `fetch` bridge as the default model transport for Anthropic SDK calls.
+Supa Butler now includes a ChatGPT-style dark web chat interface and an API route that forwards prompts to the existing agent/model bridge.
 
-## Default model behavior
+## What it does
 
-- Anthropic SDK is initialized with `fetch: customFetch`.
-- Requests are mapped to `https://chatjimmy.ai/api/chat`.
-- Default selected model is `llama3.1-8B`.
+- Uses the Anthropic SDK with the project `customFetch` bridge.
+- Sends requests to `https://chatjimmy.ai/api/chat`.
+- Exposes `POST /api/agent` for chat messages.
+- Serves a black themed chat UI at `/`.
 
-## Run
+## Run CLI
 
 ```bash
 npm install
 npm run dev -- "Write a haiku about agents"
 ```
+
+## Run web chat
+
+```bash
+npm run dev:web
+```
+
+Then open `http://localhost:3000`.

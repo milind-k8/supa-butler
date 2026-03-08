@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supa Butler Chat</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="top-bar">
+        <button class="icon-btn" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <h1>Supa Butler</h1>
+        <button class="icon-btn" aria-label="New chat">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+      </header>
+
+      <section id="chat" class="chat" aria-live="polite"></section>
+
+      <form id="composer" class="composer">
+        <button type="button" class="icon-btn subtle" aria-label="Attach file">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 12.5 14.6 6a3 3 0 1 1 4.2 4.2l-8.1 8.1a5 5 0 1 1-7.1-7.1l8-8"/></svg>
+        </button>
+        <textarea id="prompt" rows="1" placeholder="Message Supa Butler..." required></textarea>
+        <button id="send" type="submit" class="icon-btn send" aria-label="Send message">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 6 6m-6-6-6 6M12 4v16"/></svg>
+        </button>
+      </form>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
